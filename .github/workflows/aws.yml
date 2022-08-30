@@ -80,7 +80,7 @@ jobs:
         echo $ECR_REPOSITORY
         echo $IMAGE_TAG
         echo "-------------------------------"
-        docker push [public.ecr.aws/a1o9s4f5/go_apirest_gin]
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
     - name: Fill in the new image ID in the Amazon ECS task definition
