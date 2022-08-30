@@ -41,9 +41,6 @@ env:
   CONTAINER_NAME: go-apirest-gin-container        # set this to the name of the container in the
                                                   # containerDefinitions section of your task definition
 
-permissions:
-  contents: write
-
 jobs:
   deploy:
     name: Deploy
