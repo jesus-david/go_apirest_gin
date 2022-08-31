@@ -10,6 +10,12 @@ func main() {
   r := gin.Default()
   r.GET("/", func(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
+      "message": "Hola Mundo!",
+    })
+  })
+  // ECS health check
+  r.GET("/ping", func(c *gin.Context) {
+    c.JSON(http.StatusOK, gin.H{
       "message": "pong",
     })
   })
